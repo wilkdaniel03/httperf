@@ -1381,7 +1381,7 @@ main(int argc, char **argv)
 	}
 	core_init();
 
-	signal(SIGINT, (void (*)()) core_exit);
+	signal(SIGINT, (void *) core_exit);
 
 	for (i = 0; i < num_stats; ++i)
 		(*stat[i]->init) ();
